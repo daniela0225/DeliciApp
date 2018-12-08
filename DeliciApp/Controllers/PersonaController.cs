@@ -3,50 +3,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+//using Entities;
 using BDAccess;
-using Entities;
-
 
 namespace DeliciApp.Controllers
 {
     public class PersonaController : Controller
     {
-        PersonaBD bd = new PersonaBD();
-
         // GET: Persona
         public ActionResult Index()
         {
-            return View();
-        }
-
-        // GET: Employee/GetAllEmpDetails  URL  
-        public ActionResult GetLista()
-        {
-            DeliciappEntities bd = new DeliciappEntities();
+            PersonaBD per = new PersonaBD();
             ModelState.Clear();
-            return View(bd.Lista());
+            return View(per.Lista());
         }
-        // GET: Employee/AddEmployee    URL  
-        public ActionResult AddEmployee()
+
+        // GET: Persona/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }
-        // POST: Employee/AddEmployee    
+
+        // GET: Persona/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Persona/Create
         [HttpPost]
-        public ActionResult AddEmployee(EmpModel Emp)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    EmpRepository EmpRepo = new EmpRepository();
-                    if (EmpRepo.AddEmployee(Emp))
-                    {
-                        ViewBag.Message =“Empleado agregado";    
-                    
-}
-                }
-                return View();
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -54,42 +46,21 @@ namespace DeliciApp.Controllers
             }
         }
 
-        // GET: Employee/EditEmpDetails/5    
-        public ActionResult EditEmpDetails(int id)
+        // GET: Persona/Edit/5
+        public ActionResult Edit(int id)
         {
-            EmpRepository EmpRepo = new EmpRepository();
-            return View(EmpRepo.GetAllEmployees()
-                    .Find(Emp => Emp.Empid == id));
+            return View();
         }
 
-        // POST: Employee/EditEmpDetails/5    
+        // POST: Persona/Edit/5
         [HttpPost]
-        public ActionResult EditEmpDetails(int id, EmpModel obj)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
-                EmpRepository EmpRepo = new EmpRepository();
-                EmpRepo.UpdateEmployee(obj);
-                return RedirectToAction("GetAllEmpDetails");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-        // GET: Employee/DeleteEmp/5    
-        public ActionResult DeleteEmp(int id)
-        {
-            try
-            {
-                EmpRepository EmpRepo = new EmpRepository();
-                if (EmpRepo.DeleteEmployee(id))
-                {
-                    ViewBag.AlertMsg =“Empleado eliminado";    
-                
-}
-                return RedirectToAction("GetAllEmpDetails");
+                // TODO: Add update logic here
 
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -97,8 +68,26 @@ namespace DeliciApp.Controllers
             }
         }
 
+        // GET: Persona/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
 
+        // POST: Persona/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
 
-
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

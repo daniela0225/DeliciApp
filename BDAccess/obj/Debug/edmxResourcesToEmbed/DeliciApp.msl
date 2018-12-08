@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DeliciappModelStoreContainer" CdmEntityContainer="DeliciappEntities">
+    <EntitySetMapping Name="Meals">
+      <EntityTypeMapping TypeName="DeliciappModel.Meals">
+        <MappingFragment StoreEntitySet="Meals">
+          <ScalarProperty Name="id_mea" ColumnName="id_mea" />
+          <ScalarProperty Name="id_tmea" ColumnName="id_tmea" />
+          <ScalarProperty Name="mea_name" ColumnName="mea_name" />
+          <ScalarProperty Name="mea_desc" ColumnName="mea_desc" />
+          <ScalarProperty Name="mea_cost" ColumnName="mea_cost" />
+          <ScalarProperty Name="mea_pic" ColumnName="mea_pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="DeliciappModel.Menus">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="id_men" ColumnName="id_men" />
+          <ScalarProperty Name="id_mea" ColumnName="id_mea" />
+          <ScalarProperty Name="id_rest" ColumnName="id_rest" />
+          <ScalarProperty Name="men_avaiFrom" ColumnName="men_avaiFrom" />
+          <ScalarProperty Name="men_avaiTo" ColumnName="men_avaiTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="DeliciappModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+          <ScalarProperty Name="per_name" ColumnName="per_name" />
+          <ScalarProperty Name="per_mail" ColumnName="per_mail" />
+          <ScalarProperty Name="per_pass" ColumnName="per_pass" />
+          <ScalarProperty Name="per_phone" ColumnName="per_phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="DeliciappModel.Reservations">
+        <MappingFragment StoreEntitySet="Reservations">
+          <ScalarProperty Name="id_resv" ColumnName="id_resv" />
+          <ScalarProperty Name="id_rest" ColumnName="id_rest" />
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+          <ScalarProperty Name="resv_date" ColumnName="resv_date" />
+          <ScalarProperty Name="resv_phone" ColumnName="resv_phone" />
+          <ScalarProperty Name="resv_add" ColumnName="resv_add" />
+          <ScalarProperty Name="resv_mail" ColumnName="resv_mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="DeliciappModel.Restaurants">
+        <MappingFragment StoreEntitySet="Restaurants">
+          <ScalarProperty Name="id_rest" ColumnName="id_rest" />
+          <ScalarProperty Name="id_trest" ColumnName="id_trest" />
+          <ScalarProperty Name="rest_name" ColumnName="rest_name" />
+          <ScalarProperty Name="rest_desc" ColumnName="rest_desc" />
+          <ScalarProperty Name="rest_address" ColumnName="rest_address" />
+          <ScalarProperty Name="rest_map" ColumnName="rest_map" />
+          <ScalarProperty Name="rest_pic" ColumnName="rest_pic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Scores">
+      <EntityTypeMapping TypeName="DeliciappModel.Scores">
+        <MappingFragment StoreEntitySet="Scores">
+          <ScalarProperty Name="id_sco" ColumnName="id_sco" />
+          <ScalarProperty Name="id_per" ColumnName="id_per" />
+          <ScalarProperty Name="id_rest" ColumnName="id_rest" />
+          <ScalarProperty Name="sco_desc" ColumnName="sco_desc" />
+          <ScalarProperty Name="sco_stars" ColumnName="sco_stars" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DeliciappModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeMeal">
+      <EntityTypeMapping TypeName="DeliciappModel.TypeMeal">
+        <MappingFragment StoreEntitySet="TypeMeal">
+          <ScalarProperty Name="id_tmea" ColumnName="id_tmea" />
+          <ScalarProperty Name="tmea_name" ColumnName="tmea_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRest">
+      <EntityTypeMapping TypeName="DeliciappModel.TypeRest">
+        <MappingFragment StoreEntitySet="TypeRest">
+          <ScalarProperty Name="id_trest" ColumnName="id_trest" />
+          <ScalarProperty Name="trest_name" ColumnName="trest_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="deleteMeals" FunctionName="DeliciappModel.Store.deleteMeals" />
+    <FunctionImportMapping FunctionImportName="deleteMenus" FunctionName="DeliciappModel.Store.deleteMenus" />
+    <FunctionImportMapping FunctionImportName="deletePersons" FunctionName="DeliciappModel.Store.deletePersons" />
+    <FunctionImportMapping FunctionImportName="deleteReservations" FunctionName="DeliciappModel.Store.deleteReservations" />
+    <FunctionImportMapping FunctionImportName="deleteRestaurants" FunctionName="DeliciappModel.Store.deleteRestaurants" />
+    <FunctionImportMapping FunctionImportName="deleteTypeMeal" FunctionName="DeliciappModel.Store.deleteTypeMeal" />
+    <FunctionImportMapping FunctionImportName="deleteTypeRest" FunctionName="DeliciappModel.Store.deleteTypeRest" />
+    <FunctionImportMapping FunctionImportName="insertMeals" FunctionName="DeliciappModel.Store.insertMeals" />
+    <FunctionImportMapping FunctionImportName="insertMenus" FunctionName="DeliciappModel.Store.insertMenus" />
+    <FunctionImportMapping FunctionImportName="insertPersons" FunctionName="DeliciappModel.Store.insertPersons" />
+    <FunctionImportMapping FunctionImportName="insertReservations" FunctionName="DeliciappModel.Store.insertReservations" />
+    <FunctionImportMapping FunctionImportName="insertRestaurants" FunctionName="DeliciappModel.Store.insertRestaurants" />
+    <FunctionImportMapping FunctionImportName="insertScores" FunctionName="DeliciappModel.Store.insertScores" />
+    <FunctionImportMapping FunctionImportName="insertTyperRest" FunctionName="DeliciappModel.Store.insertTyperRest" />
+    <FunctionImportMapping FunctionImportName="inserTypeMeal" FunctionName="DeliciappModel.Store.inserTypeMeal" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DeliciappModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DeliciappModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DeliciappModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DeliciappModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DeliciappModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DeliciappModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DeliciappModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="updateMeals" FunctionName="DeliciappModel.Store.updateMeals" />
+    <FunctionImportMapping FunctionImportName="updateMenus" FunctionName="DeliciappModel.Store.updateMenus" />
+    <FunctionImportMapping FunctionImportName="updatePersons" FunctionName="DeliciappModel.Store.updatePersons" />
+    <FunctionImportMapping FunctionImportName="updateReservations" FunctionName="DeliciappModel.Store.updateReservations" />
+    <FunctionImportMapping FunctionImportName="updateRestaurants" FunctionName="DeliciappModel.Store.updateRestaurants" />
+    <FunctionImportMapping FunctionImportName="updateScores" FunctionName="DeliciappModel.Store.updateScores" />
+    <FunctionImportMapping FunctionImportName="updateTypeMeal" FunctionName="DeliciappModel.Store.updateTypeMeal" />
+    <FunctionImportMapping FunctionImportName="updateTypeRest" FunctionName="DeliciappModel.Store.updateTypeRest" />
+  </EntityContainerMapping>
+</Mapping>

@@ -25,7 +25,7 @@ namespace BDAccess
         }
         public int Insert(TypeRest tm)
         {
-            context.insertTypeMeal(
+            context.inserTypeMeal(
                     tm.trest_name
             );
             return context.SaveChanges();

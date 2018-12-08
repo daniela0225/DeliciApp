@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliciappModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Meals">
+    <Key>
+      <PropertyRef Name="id_mea" />
+    </Key>
+    <Property Name="id_mea" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_tmea" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="mea_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mea_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mea_cost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mea_pic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TypeMeal" Relationship="Self.FK_Meals_TypeMeal" FromRole="Meals" ToRole="TypeMeal" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK_Menus_Meals" FromRole="Meals" ToRole="Menus" />
+  </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="id_men" />
+    </Key>
+    <Property Name="id_men" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_mea" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_rest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="men_avaiFrom" Type="DateTime" Precision="3" />
+    <Property Name="men_avaiTo" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Meals" Relationship="Self.FK_Menus_Meals" FromRole="Menus" ToRole="Meals" />
+    <NavigationProperty Name="Restaurants" Relationship="Self.FK_Menus_Restaurants" FromRole="Menus" ToRole="Restaurants" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="id_per" />
+    </Key>
+    <Property Name="id_per" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="per_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_Persons" FromRole="Persons" ToRole="Reservations" />
+    <NavigationProperty Name="Scores" Relationship="Self.FK_Scores_Persons" FromRole="Persons" ToRole="Scores" />
+  </EntityType>
+  <EntityType Name="Reservations">
+    <Key>
+      <PropertyRef Name="id_resv" />
+    </Key>
+    <Property Name="id_resv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_rest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_per" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="resv_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="resv_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="resv_add" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resv_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Reservations_Persons" FromRole="Reservations" ToRole="Persons" />
+    <NavigationProperty Name="Restaurants" Relationship="Self.FK_Reservations_Restaurants" FromRole="Reservations" ToRole="Restaurants" />
+  </EntityType>
+  <EntityType Name="Restaurants">
+    <Key>
+      <PropertyRef Name="id_rest" />
+    </Key>
+    <Property Name="id_rest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_trest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="rest_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rest_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rest_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rest_map" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rest_pic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Menus" Relationship="Self.FK_Menus_Restaurants" FromRole="Restaurants" ToRole="Menus" />
+    <NavigationProperty Name="Reservations" Relationship="Self.FK_Reservations_Restaurants" FromRole="Restaurants" ToRole="Reservations" />
+    <NavigationProperty Name="TypeRest" Relationship="Self.FK_Restaurants_Restaurants" FromRole="Restaurants" ToRole="TypeRest" />
+    <NavigationProperty Name="Scores" Relationship="Self.FK_Scores_Restaurants" FromRole="Restaurants" ToRole="Scores" />
+  </EntityType>
+  <EntityType Name="Scores">
+    <Key>
+      <PropertyRef Name="id_sco" />
+    </Key>
+    <Property Name="id_sco" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_per" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_rest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="sco_desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sco_stars" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Persons" Relationship="Self.FK_Scores_Persons" FromRole="Scores" ToRole="Persons" />
+    <NavigationProperty Name="Restaurants" Relationship="Self.FK_Scores_Restaurants" FromRole="Scores" ToRole="Restaurants" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TypeMeal">
+    <Key>
+      <PropertyRef Name="id_tmea" />
+    </Key>
+    <Property Name="id_tmea" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tmea_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Meals" Relationship="Self.FK_Meals_TypeMeal" FromRole="TypeMeal" ToRole="Meals" />
+  </EntityType>
+  <EntityType Name="TypeRest">
+    <Key>
+      <PropertyRef Name="id_trest" />
+    </Key>
+    <Property Name="id_trest" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="trest_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Restaurants" Relationship="Self.FK_Restaurants_Restaurants" FromRole="TypeRest" ToRole="Restaurants" />
+  </EntityType>
+  <Association Name="FK_Meals_TypeMeal">
+    <End Role="TypeMeal" Type="Self.TypeMeal" Multiplicity="1" />
+    <End Role="Meals" Type="Self.Meals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeMeal">
+        <PropertyRef Name="id_tmea" />
+      </Principal>
+      <Dependent Role="Meals">
+        <PropertyRef Name="id_tmea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menus_Meals">
+    <End Role="Meals" Type="Self.Meals" Multiplicity="1" />
+    <End Role="Menus" Type="Self.Menus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meals">
+        <PropertyRef Name="id_mea" />
+      </Principal>
+      <Dependent Role="Menus">
+        <PropertyRef Name="id_mea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menus_Restaurants">
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="1" />
+    <End Role="Menus" Type="Self.Menus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurants">
+        <PropertyRef Name="id_rest" />
+      </Principal>
+      <Dependent Role="Menus">
+        <PropertyRef Name="id_rest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Persons">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="Reservations">
+        <PropertyRef Name="id_per" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Scores_Persons">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="Scores" Type="Self.Scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="id_per" />
+      </Principal>
+      <Dependent Role="Scores">
+        <PropertyRef Name="id_per" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservations_Restaurants">
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="1" />
+    <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurants">
+        <PropertyRef Name="id_rest" />
+      </Principal>
+      <Dependent Role="Reservations">
+        <PropertyRef Name="id_rest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Restaurants_Restaurants">
+    <End Role="TypeRest" Type="Self.TypeRest" Multiplicity="1" />
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeRest">
+        <PropertyRef Name="id_trest" />
+      </Principal>
+      <Dependent Role="Restaurants">
+        <PropertyRef Name="id_trest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Scores_Restaurants">
+    <End Role="Restaurants" Type="Self.Restaurants" Multiplicity="1" />
+    <End Role="Scores" Type="Self.Scores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurants">
+        <PropertyRef Name="id_rest" />
+      </Principal>
+      <Dependent Role="Scores">
+        <PropertyRef Name="id_rest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeliciappEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Meals" EntityType="Self.Meals" />
+    <EntitySet Name="Menus" EntityType="Self.Menus" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" />
+    <EntitySet Name="Reservations" EntityType="Self.Reservations" />
+    <EntitySet Name="Restaurants" EntityType="Self.Restaurants" />
+    <EntitySet Name="Scores" EntityType="Self.Scores" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TypeMeal" EntityType="Self.TypeMeal" />
+    <EntitySet Name="TypeRest" EntityType="Self.TypeRest" />
+    <AssociationSet Name="FK_Meals_TypeMeal" Association="Self.FK_Meals_TypeMeal">
+      <End Role="TypeMeal" EntitySet="TypeMeal" />
+      <End Role="Meals" EntitySet="Meals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menus_Meals" Association="Self.FK_Menus_Meals">
+      <End Role="Meals" EntitySet="Meals" />
+      <End Role="Menus" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menus_Restaurants" Association="Self.FK_Menus_Restaurants">
+      <End Role="Restaurants" EntitySet="Restaurants" />
+      <End Role="Menus" EntitySet="Menus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Persons" Association="Self.FK_Reservations_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Reservations" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Scores_Persons" Association="Self.FK_Scores_Persons">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Scores" EntitySet="Scores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservations_Restaurants" Association="Self.FK_Reservations_Restaurants">
+      <End Role="Restaurants" EntitySet="Restaurants" />
+      <End Role="Reservations" EntitySet="Reservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Restaurants_Restaurants" Association="Self.FK_Restaurants_Restaurants">
+      <End Role="TypeRest" EntitySet="TypeRest" />
+      <End Role="Restaurants" EntitySet="Restaurants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Scores_Restaurants" Association="Self.FK_Scores_Restaurants">
+      <End Role="Restaurants" EntitySet="Restaurants" />
+      <End Role="Scores" EntitySet="Scores" />
+    </AssociationSet>
+    <FunctionImport Name="deleteMeals">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deleteMenus">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deletePersons">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deleteReservations">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deleteRestaurants">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deleteTypeMeal">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="deleteTypeRest">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertMeals">
+      <Parameter Name="id_tmea" Mode="In" Type="String" />
+      <Parameter Name="mea_name" Mode="In" Type="String" />
+      <Parameter Name="mea_desc" Mode="In" Type="String" />
+      <Parameter Name="mea_cost" Mode="In" Type="String" />
+      <Parameter Name="mea_pic" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertMenus">
+      <Parameter Name="id_mea" Mode="In" Type="String" />
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="men_avaifrom" Mode="In" Type="DateTime" />
+      <Parameter Name="men_avaito" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="insertPersons">
+      <Parameter Name="per_name" Mode="In" Type="String" />
+      <Parameter Name="per_mail" Mode="In" Type="String" />
+      <Parameter Name="per_pass" Mode="In" Type="String" />
+      <Parameter Name="per_phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertReservations">
+      <Parameter Name="id_resv" Mode="In" Type="String" />
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="id_per" Mode="In" Type="String" />
+      <Parameter Name="resv_date" Mode="In" Type="DateTime" />
+      <Parameter Name="resv_phone" Mode="In" Type="String" />
+      <Parameter Name="resv_add" Mode="In" Type="String" />
+      <Parameter Name="resv_mail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertRestaurants">
+      <Parameter Name="trest" Mode="In" Type="String" />
+      <Parameter Name="rest_name" Mode="In" Type="String" />
+      <Parameter Name="rest_desc" Mode="In" Type="String" />
+      <Parameter Name="rest_address" Mode="In" Type="String" />
+      <Parameter Name="rest_map" Mode="In" Type="String" />
+      <Parameter Name="rest_pic" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insertScores">
+      <Parameter Name="id_per" Mode="In" Type="String" />
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="sco_desc" Mode="In" Type="String" />
+      <Parameter Name="sco_stars" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertTyperRest">
+      <Parameter Name="trest_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="inserTypeMeal">
+      <Parameter Name="tmea_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="updateMeals">
+      <Parameter Name="mea" Mode="In" Type="String" />
+      <Parameter Name="tmea" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="desc" Mode="In" Type="String" />
+      <Parameter Name="cost" Mode="In" Type="String" />
+      <Parameter Name="pic" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateMenus">
+      <Parameter Name="men" Mode="In" Type="String" />
+      <Parameter Name="mea" Mode="In" Type="String" />
+      <Parameter Name="rest" Mode="In" Type="String" />
+      <Parameter Name="men_avaiFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="men_avaiTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="updatePersons">
+      <Parameter Name="per" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="mail" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateReservations">
+      <Parameter Name="id_resv" Mode="In" Type="String" />
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="id_per" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="add" Mode="In" Type="String" />
+      <Parameter Name="mail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateRestaurants">
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="id_trest" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="desc" Mode="In" Type="String" />
+      <Parameter Name="adress" Mode="In" Type="String" />
+      <Parameter Name="map" Mode="In" Type="String" />
+      <Parameter Name="pic" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateScores">
+      <Parameter Name="id_sco" Mode="In" Type="String" />
+      <Parameter Name="id_per" Mode="In" Type="String" />
+      <Parameter Name="id_rest" Mode="In" Type="String" />
+      <Parameter Name="desc" Mode="In" Type="String" />
+      <Parameter Name="starts" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="updateTypeMeal">
+      <Parameter Name="id_tmea" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateTypeRest">
+      <Parameter Name="id_trest" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

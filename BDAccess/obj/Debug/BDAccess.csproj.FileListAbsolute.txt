@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\BDAccess.dll.config
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\BDAccess.dll
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\BDAccess.pdb
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\Entities.dll
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\Entities.pdb
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\Entities.dll.config
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\DeliciApp\BDAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.csprojAssemblyReference.cache
+C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CopyComplete
+C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.dll
+C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.pdb

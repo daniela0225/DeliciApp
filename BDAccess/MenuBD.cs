@@ -32,7 +32,7 @@ namespace BDAccess
             context.insertMenus(
                 menu.id_mea,
                 menu.id_rest,
-                menu.men_avaiForm,
+                menu.men_avaiFrom,
                 menu.men_avaiTo
                 );
             return context.SaveChanges();
@@ -43,12 +43,12 @@ namespace BDAccess
                 menu.id_men,
                 menu.id_mea,
                 menu.id_rest,
-                menu.men_avaiForm,
+                menu.men_avaiFrom,
                 menu.men_avaiTo
                 );
             return context.SaveChanges();
         }
-        public int Delete(int id_men)
+        public int Delete(String id_men)
         {
             context.deleteMenus(id_men);
             return context.SaveChanges();

@@ -32,6 +32,7 @@ namespace BDAccess
         public int Insertar(ClassMeals meals)
         {
             context.insertMeals(
+                meals.id_tmea,
                 meals.mea_name,
                 meals.mea_desc,
                 meals.mea_cost,

@@ -48,5 +48,24 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MealsBL.cs" />
+    <Compile Include="MenuBL.cs" />
+    <Compile Include="PersonaBL.cs" />
+    <Compile Include="ReservacionBL.cs" />
+    <Compile Include="RestauranteBL.cs" />
+    <Compile Include="TypeMealBL.cs" />
+    <Compile Include="TypeRestBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BDAccess\BDAccess.csproj">
+      <Project>{a641d93d-6ac5-4ce4-9e63-4a304d7a55e9}</Project>
+      <Name>BDAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{ab30588d-2517-4d2d-bafa-dfe3e514fed7}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

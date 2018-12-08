@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Entities.Persona>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_per)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.per_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.per_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.per_pass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.per_phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_per)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.per_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.per_mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.per_pass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.per_phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

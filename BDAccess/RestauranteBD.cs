@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
+using Entities;
 
 namespace BDAccess
 {
-    class RestauranteBD
+    public class RestauranteBD
     {
         DeliciappEntities context = new DeliciappEntities();
 
-        public List<Restaurants> Listar()
+        public List<Restaurante> Listar()
         {
             using (context)
             {
@@ -28,7 +28,7 @@ namespace BDAccess
                 return query.ToList();
             }
         }
-        public Restaurants GetID(string id_rest)
+        public Restaurante GetID(string id_rest)
         {
             var query = context.Restaurants.Select(res => new Restaurante
             {
@@ -44,7 +44,7 @@ namespace BDAccess
 
         }
 
-        public int Insert(Restaurants res)
+        public int Insert(Restaurante res)
         {
             context.insertRestaurants(
                 res.id_trest,
@@ -56,7 +56,7 @@ namespace BDAccess
                 );
             return context.SaveChanges();
         }
-        public int Update(Restaurants res)
+        public int Update(Restaurante res)
         {
             context.updateRestaurants(
                 res.id_rest,

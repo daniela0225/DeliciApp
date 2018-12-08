@@ -11,7 +11,7 @@ namespace Entities
         public string id_men { get; set; }
         public string id_mea { get; set; }
         public string id_rest { get; set; }
-        public DateTime men_avaiForm { get; set; }
+        public DateTime men_avaiFrom { get; set; }
         public DateTime men_avaiTo { get; set; }
         
     }

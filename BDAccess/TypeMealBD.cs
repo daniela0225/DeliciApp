@@ -7,7 +7,7 @@ using Entities;
 
 namespace BDAccess
 {
-    class TypeMealBD
+    public class TypeMealBD
     {
         DeliciappEntities context = new DeliciappEntities();
 

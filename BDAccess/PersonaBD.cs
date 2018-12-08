@@ -29,7 +29,7 @@ namespace BDAccess
 
         public int Insert(Persona per)
         {
-            context.insertPersona(
+            context.insertPersons(
                 per.per_name,
                 per.per_mail,
                 per.per_pass,
@@ -39,7 +39,7 @@ namespace BDAccess
         }
         public int Update(Persona per)
         {
-            context.updatePersona(
+            context.updatePersons(
                 per.id_per,
                 per.per_name,
                 per.per_mail,
@@ -51,7 +51,7 @@ namespace BDAccess
 
         public int Delete(string id_per)
         {
-            context.deletePersona(id_per);
+            context.deletePersons(id_per);
             return context.SaveChanges();
         }
 

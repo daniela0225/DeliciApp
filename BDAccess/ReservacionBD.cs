@@ -7,7 +7,7 @@ using Entities;
 
 namespace BDAccess
 {
-    class ReservacionBD
+    public class ReservacionBD
     {
         DeliciappEntities context = new DeliciappEntities();
 
@@ -32,12 +32,13 @@ namespace BDAccess
         public int Insert(Reservacion res)
         {
             context.insertReservations(
-                res.id_per,
                 res.id_rest,
-                res.resv_add,
+                res.id_resv,
+                res.id_per,
                 res.resv_date,
-                res.resv_mail,
-                res.resv_phone
+                res.resv_phone,
+                res.resv_add,
+                res.resv_mail
                 );
             return context.SaveChanges();
         }
@@ -46,18 +47,19 @@ namespace BDAccess
         {
             context.updateReservations(
                 res.id_resv,
-                res.id_per,
                 res.id_rest,
-                res.resv_add,
+                res.id_per,
                 res.resv_date,
-                res.resv_mail,
-                res.resv_phone
+                res.resv_phone,
+                res.resv_add,
+                res.resv_mail
+
                 );
             return context.SaveChanges();
         }
-        public int Delete(string id)
+        public int Delete(string id_resv)
         {
-            context.deleteReservations(id);
+            context.deleteReservations(id_resv);
             return context.SaveChanges();
         }
     }

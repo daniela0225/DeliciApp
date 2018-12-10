@@ -1,0 +1,66 @@
+﻿@model Entities.ClassMeals
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ClassMeals</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_mea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_mea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_tmea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_tmea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mea_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mea_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mea_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mea_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mea_cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mea_cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mea_pic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mea_pic)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Entities.Restaurante>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_rest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_trest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_map)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rest_pic)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_rest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_trest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_map)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rest_pic)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

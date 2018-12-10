@@ -1,0 +1,74 @@
+﻿@model Entities.Restaurante
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Restaurante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_rest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_rest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_trest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_trest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rest_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rest_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rest_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rest_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rest_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rest_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rest_map)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rest_map)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rest_pic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rest_pic)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

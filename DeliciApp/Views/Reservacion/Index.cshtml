@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Entities.Reservacion>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_resv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_rest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_per)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resv_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resv_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resv_add)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resv_mail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_resv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_rest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_per)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resv_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resv_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resv_add)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resv_mail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

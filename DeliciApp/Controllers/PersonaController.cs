@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-//using Entities;
+using Entities;
 using BDAccess;
+using BL;
 
 namespace DeliciApp.Controllers
 {
     public class PersonaController : Controller
     {
+        PersonaBL blPer = new PersonaBL();
         // GET: Persona
         public ActionResult Index()
         {
-            PersonaBD per = new PersonaBD();
-            ModelState.Clear();
-            return View(per.Lista());
+            return View();
         }
-
+        public ActionResult List()
+        {
+            return View();
+        }
+        
         // GET: Persona/Details/5
         public ActionResult Details(int id)
         {
@@ -25,7 +29,7 @@ namespace DeliciApp.Controllers
         }
 
         // GET: Persona/Create
-        public ActionResult Create()
+        public ActionResult Create(PersonaBD persona)
         {
             return View();
         }
@@ -89,5 +93,9 @@ namespace DeliciApp.Controllers
                 return View();
             }
         }
+
+        /* Sesion*/
+
+       
     }
 }

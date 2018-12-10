@@ -178,7 +178,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MealController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Controllers\ReservacionController.cs" />
+    <Compile Include="Controllers\RestauranteController.cs" />
+    <Compile Include="Controllers\TypeMealController.cs" />
+    <Compile Include="Controllers\TypeRestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +202,30 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Persona\Index.cshtml" />
     <Content Include="Views\Shared\Layout2.cshtml" />
+    <Content Include="Views\Meal\Create.cshtml" />
+    <Content Include="Views\Meal\Delete.cshtml" />
+    <Content Include="Views\Meal\Edit.cshtml" />
+    <Content Include="Views\Meal\Index.cshtml" />
+    <Content Include="Views\Menu\Create.cshtml" />
+    <Content Include="Views\Menu\Delete.cshtml" />
+    <Content Include="Views\Menu\Edit.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Reservacion\Create.cshtml" />
+    <Content Include="Views\Reservacion\Delete.cshtml" />
+    <Content Include="Views\Reservacion\Edit.cshtml" />
+    <Content Include="Views\Reservacion\Index.cshtml" />
+    <Content Include="Views\Restaurante\Create.cshtml" />
+    <Content Include="Views\Restaurante\Delete.cshtml" />
+    <Content Include="Views\Restaurante\Edit.cshtml" />
+    <Content Include="Views\Restaurante\Index.cshtml" />
+    <Content Include="Views\TypeMeal\Create.cshtml" />
+    <Content Include="Views\TypeMeal\Delete.cshtml" />
+    <Content Include="Views\TypeMeal\Edit.cshtml" />
+    <Content Include="Views\TypeMeal\Index.cshtml" />
+    <Content Include="Views\TypeRest\Create.cshtml" />
+    <Content Include="Views\TypeRest\Delete.cshtml" />
+    <Content Include="Views\TypeRest\Edit.cshtml" />
+    <Content Include="Views\TypeRest\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

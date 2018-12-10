@@ -16,3 +16,21 @@ C:\Users\User\source\repos\DeliciApp\BL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\source\repos\DeliciApp\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\User\source\repos\DeliciApp\BL\obj\Debug\BL.dll
 C:\Users\User\source\repos\DeliciApp\BL\obj\Debug\BL.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BL.dll.config
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BL.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BL.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BDAccess.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\Entities.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\EntityFramework.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BDAccess.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\BDAccess.dll.config
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\Entities.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\Entities.dll.config
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\EntityFramework.xml
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\obj\Debug\BL.csprojAssemblyReference.cache
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\obj\Debug\BL.csproj.CopyComplete
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\obj\Debug\BL.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BL\obj\Debug\BL.pdb

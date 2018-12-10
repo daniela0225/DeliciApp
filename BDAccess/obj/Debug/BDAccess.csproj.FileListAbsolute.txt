@@ -13,3 +13,18 @@ C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CoreComp
 C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CopyComplete
 C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.dll
 C:\Users\User\source\repos\DeliciApp\BDAccess\obj\Debug\BDAccess.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\BDAccess.dll.config
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\BDAccess.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\BDAccess.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\Entities.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\EntityFramework.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\Entities.pdb
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\Entities.dll.config
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\EntityFramework.xml
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\obj\Debug\BDAccess.csprojAssemblyReference.cache
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CoreCompileInputs.cache
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\obj\Debug\BDAccess.csproj.CopyComplete
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\obj\Debug\BDAccess.dll
+E:\Tecsup\Desarrollo de palicaciones empresariales avanzado\Proyecto Final\DeliciApp\BDAccess\obj\Debug\BDAccess.pdb
